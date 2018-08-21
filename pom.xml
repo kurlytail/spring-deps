@@ -25,11 +25,6 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
 		</dependency>
@@ -62,6 +57,28 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
+		</dependency>
+
+		<!-- Tests -->
+		<dependency>
+			<groupId>io.github.json-snapshot</groupId>
+			<artifactId>json-snapshot</artifactId>
+			<version>1.0.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>
+				powermock-release-with-junit-mockito-dependencies
+			</artifactId>
+			<version>1.6.2</version>
+			<type>pom</type>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
