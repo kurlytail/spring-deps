@@ -96,7 +96,10 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
+<<<<<<< HEAD
             <scope>test</scope>
+=======
+>>>>>>> 45f72b854174354f303bd611d0f8c533a70840a7
         </dependency>
     </dependencies>
 
