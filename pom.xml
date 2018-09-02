@@ -1,17 +1,13 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.4.RELEASE</version>
+        <groupId>com.bst</groupId>
+        <artifactId>pmgr</artifactId>
+        <version>0.0.3-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.bst</groupId>
     <artifactId>spring-deps</artifactId>
-    <version>0.0.1</version>
     <packaging>pom</packaging>
 
     <dependencies>
@@ -27,10 +23,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -98,11 +90,19 @@
             <artifactId>selenium-java</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+        </dependency>
     </dependencies>
 
     <properties>
         <java.version>1.8</java.version>
-        <aspectj.version>1.9.1</aspectj.version>
+        <aspectj.version>1.8.13</aspectj.version>
     </properties>
 
     <build>
@@ -111,21 +111,20 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>aspectj-maven-plugin</artifactId>
-                <version>1.4</version>
+                <version>1.11</version>
                 <configuration>
                     <showWeaveInfo>true</showWeaveInfo>
+                    <forceAjcCompile>true</forceAjcCompile>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                     <Xlint>ignore</Xlint>
                     <complianceLevel>${java.version}</complianceLevel>
                     <encoding>UTF-8</encoding>
-                    <verbose>false</verbose>
-                    <aspectLibraries>
-                        <aspectLibrary>
-                            <groupId>org.springframework</groupId>
-                            <artifactId>spring-aspects</artifactId>
-                        </aspectLibrary>
-                    </aspectLibraries>
+                    <verbose>true</verbose>
+                    <proc>none</proc>
+                    <weaveDirectories>
+                        <weaveDirectory>${project.build.directory}/classes</weaveDirectory>
+                    </weaveDirectories>
                 </configuration>
                 <executions>
                     <execution>
@@ -135,19 +134,12 @@
                         </goals>
                     </execution>
                 </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.aspectj</groupId>
-                        <artifactId>aspectjrt</artifactId>
-                        <version>${aspectj.version}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.aspectj</groupId>
-                        <artifactId>aspectjtools</artifactId>
-                        <version>${aspectj.version}</version>
-                    </dependency>
-                </dependencies>
             </plugin>
         </plugins>
     </build>
+    <name>Spring Dependencies</name>
+    <organization>
+        <name>Brainspeed Technologies</name>
+        <url>www.brainspeedtech.com</url>
+    </organization>
 </project>
