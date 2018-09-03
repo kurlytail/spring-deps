@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 0e7afbc6f35645634f7a7438d3ef318e0ce847f1 ashwin <ashwinkn@hotmail.com> 1535908862 -0500	clone: from https://github.com/kurlytail/pmgr-app
+0e7afbc6f35645634f7a7438d3ef318e0ce847f1 0e7afbc6f35645634f7a7438d3ef318e0ce847f1 ashwin <ashwinkn@hotmail.com> 1535908868 -0500	checkout: moving from master to 0e7afbc6f35645634f7a7438d3ef318e0ce847f1
+0e7afbc6f35645634f7a7438d3ef318e0ce847f1 8cf0f717904f591a3845244baa1b42275de5add5 ashwin <ashwinkn@hotmail.com> 1535930276 -0500	commit: Added tomcat deployable
+8cf0f717904f591a3845244baa1b42275de5add5 bb5d343eea3c33950fe485ab82b91f92b42016b3 ashwin <ashwinkn@hotmail.com> 1536009282 -0500	commit: Fixed up libraries
